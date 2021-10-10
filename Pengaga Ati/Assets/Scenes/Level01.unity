@@ -1022,7 +1022,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1336859110}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -1.266, z: 4.992}
+  m_LocalPosition: {x: 0, y: -0.89, z: 5.78}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 8390943013138168814}
@@ -5417,7 +5417,6 @@ MonoBehaviour:
   secondCamera: {fileID: 44638388}
   pickUpDest: {fileID: 1352676329}
   pickItem: {fileID: 1244870920}
-  pickedItem: 1
 --- !u!124 &8390943013129311470
 Behaviour:
   m_ObjectHideFlags: 0
