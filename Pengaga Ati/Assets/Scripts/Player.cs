@@ -20,7 +20,7 @@ namespace Examples
 
         public Camera secondCamera;
 
-        public Transform pickUpDest; //example
+        public Transform pickUpDest;
         public Rigidbody pickItem;
         public bool pickedItem = true;
 
