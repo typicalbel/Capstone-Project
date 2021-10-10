@@ -22,8 +22,8 @@ namespace Examples
 
         public Transform pickUpDest;
         public Rigidbody pickItem;
-        
-        PlayerInteractionPickUp playerPickUp;
+
+        public bool pickedItem = true;
 
         // Awake
         void Awake()
@@ -31,8 +31,6 @@ namespace Examples
             myTransform = transform;
             cameraTransform = Camera.main.transform;
             controller = GetComponent<CharacterController>();
-
-            playerPickUp = GetComponent<PlayerInteractionPickUp>();
 
             secondCamera.transform.position = new Vector3(0.5f, 3.4f, transform.position.z);
         }
@@ -57,7 +55,7 @@ namespace Examples
             // Assigning the pick up mechanics to the pick up button
             if( TCKInput.GetAction( "pickBtn", EActionEvent.Press))
             {
-                if (playerPickUp.pickedItem == false)
+                if (pickedItem == false)
                 {
                     PickUp();
                 }  
@@ -164,7 +162,7 @@ namespace Examples
         }
 
         // PlayerPickUp
-        /*private void OnControllerColliderHit(ControllerColliderHit hit)
+        private void OnControllerColliderHit(ControllerColliderHit hit)
         {
             // When players get close to items with tag "PickUp"
             if (hit.gameObject.tag.Equals("PickUp"))
@@ -175,7 +173,7 @@ namespace Examples
             {
                 pickedItem = true;
             }
-        }*/
+        }
 
         private void PickUp()
         {
@@ -192,7 +190,7 @@ namespace Examples
             pickItem.constraints = RigidbodyConstraints.None;
             pickItem.transform.parent = null;
             pickItem.useGravity = true;
-            playerPickUp.pickedItem = true;
+            pickedItem = true;
         }
 
 

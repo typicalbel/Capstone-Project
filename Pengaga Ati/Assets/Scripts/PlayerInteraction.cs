@@ -47,6 +47,12 @@ namespace Examples
                 selectedLand.Select(false);
                 selectedLand = null;
             }
+
+            if (other.tag == "PickUp")
+            {
+                Debug.Log("Pick Up");
+                player.pickedItem = false;
+            }
         }
 
         //Handles the selection process
